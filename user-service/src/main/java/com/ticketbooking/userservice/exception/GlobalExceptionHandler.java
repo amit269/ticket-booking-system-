@@ -19,7 +19,7 @@ public class GlobalExceptionHandler{
     }
 
 
-    // if any exception comes that we didn't handle then spring catch or exception handler catch this
+    // You can handle other exceptions here similarly
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleGenericException(){
         ErrorResponse response   =new ErrorResponse(ErrorCodeEnum.GENERIC_ERROR.getCode(),
